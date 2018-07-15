@@ -50,6 +50,6 @@ if __name__ == '__main__':
                     web.post(r'/client/{id:[0-9A-z]{8}}', transfer)])
     if PB_DEBUG:
         logging.basicConfig(level=logging.DEBUG)
-        app.router.add_static('/', os.path.join(ROOT, 'static'))
+        app.router.add_static('/', os.path.join(ROOT, 'front'))
 
     web.run_app(app, host=HOST, port=PORT)
